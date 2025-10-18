@@ -1,4 +1,4 @@
-'''Business Profit Calculator: calculates profit and margin percentage from revenue and cost data'''
+'''Business Profit Calculator: Calculates profit and margin percentage from revenue and cost data'''
 
 
 # Get revenue from user
