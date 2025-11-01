@@ -12,4 +12,4 @@ for ip, ports in devices:
             risks_num += 1
             print(f"{ip} has risky port {port} open!")
         
-print(f"Complte: {risks_num} security risks found.")
+print(f"Complete: {risks_num} security risks found.")
