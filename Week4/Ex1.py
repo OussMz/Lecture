@@ -1,19 +1,28 @@
-num = input("Enter a valid numerical score between 0 and 100: ")
-while not num.isdigit():
-    num = input("Enter a valid numerical number between 0 and 100: ")
-num = int(num)
-while num < 0 or num > 100:
-    num = int(input("Enter a valid numerical number between 0 and 100: "))
+from collections import defaultdict
 
-if 90<=num<=100:
-    grade = "A"
-elif 80<=num<=89:
-    grade = "B"
-elif 70<=num<=79:
-    grade = "C"
-elif 60<=num<=69:
-    grade = "D"
+login_attempts = [
+    ("alice", "success"),
+    ("bob", "failed"),
+    ("bob", "failed"),
+    ("charlie", "success"),
+    ("hailey", "failed"),
+    ("alice", "failed"),
+]
+false_users = []
+record = defaultdict(int)
+for user, status in login_attempts:
+    if status == "failed":
+        record[user] += 1
+        if record[user] == 3:
+            false_users.append(user)
+
+print(f"Checking login attempts:")
+if len(false_users):
+    for u in false_users:
+        print(f"ALERT: User '{u}' has 3 failed login attempts")
+    print("Security check complete.")
 else:
-    grade = "F"
+    print("No failed logins. Security check complete.")
 
-print(f"your Grade is: {grade}")
+    
+
