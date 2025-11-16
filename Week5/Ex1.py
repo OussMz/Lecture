@@ -1,7 +1,7 @@
 import string
 
 def pass_validator():
-    p = input("Enter your desired password: ")
+    p = input("Enter your desired password:  ")
     if has_min_length(p) and has_uppercase(p) and has_lowercase(p) and has_digit(p) and has_special_char(p):
         print("the entered password is valid")
         return
