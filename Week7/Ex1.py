@@ -1,4 +1,11 @@
-with open("products.txt", "w") as f:
+import os
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+products_file_path = os.path.join(current_dir, "products.txt")
+
+
+with open(products_file_path, "w") as f:
     f.write("""Laptop Computer,999.99,Electronics,Premium
 Winter Jacket,129.99,Clothing,Standard
 Python Programming Book,49.99,Books,Standard
@@ -7,7 +14,7 @@ Wireless Headphones,199.99,Electronics,Premium""")
     
 print("Products Information:\n")
 
-with open("products.txt") as f:
+with open(products_file_path) as f:
     try:
         total_products = 0
         total_discount_applied = 0
