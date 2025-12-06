@@ -1,0 +1,4 @@
+2025-12-06 12:55:15,716 - WARNING - Attempt to display user info without authentication.
+2025-12-06 12:55:15,911 - WARNING - Authentication failed 'wess', 2 attempt(s) left.
+2025-12-06 12:55:16,110 - WARNING - Authentication failed 'wess', 1 attempt(s) left.
+2025-12-06 12:55:16,305 - INFO - User 'wess' logged in successfully.
