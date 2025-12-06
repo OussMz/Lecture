@@ -116,19 +116,6 @@ class User:
 
 
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-logs_folder = os.path.join(current_dir, "Logs")
-os.makedirs(logs_folder, exist_ok=True)
-lg_path = os.path.join(logs_folder, "pw.log")
-
-pw_logger = logging.getLogger("pw_logger")
-pw_logger.setLevel(logging.INFO)
-pw_file_handler = logging.FileHandler(lg_path, mode="w")
-pw_file_handler.setLevel(logging.INFO)
-pw_file_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
-pw_logger.addHandler(pw_file_handler)
-
-pw_logger.critical("you are a BOSS!")
 
 
-print(lg_path)
+
