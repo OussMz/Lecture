@@ -3,8 +3,8 @@ import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 products_file_path = os.path.join(current_dir, "products.txt")
-
-
+print(os.path.abspath(__file__))
+print(current_dir)
 with open(products_file_path, "w") as f:
     f.write("""Laptop Computer,999.99,Electronics,Premium
 Winter Jacket,129.99,Clothing,Standard
